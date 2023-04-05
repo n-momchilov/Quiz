@@ -58,8 +58,8 @@ namespace Quiz
 
         private void LoadQuizEnd()
         {
-            label1.Text = service.GetScore().ToString();
-            label2.Text = service.getValue().ToString();
+            points.Text = service.GetScore().ToString();
+            score.Text = service.getValue().ToString();
             // value
             this.Next.Enabled = false;
             this.Answer1.Enabled = false;
@@ -84,10 +84,10 @@ namespace Quiz
             this.Answer3.Enabled = true;
             this.Answer4.Enabled = true;
 
-            this.Answer2.BackColor = Color.Transparent;
-            this.Answer3.BackColor = Color.Transparent;
-            this.Answer4.BackColor = Color.Transparent;
-            this.Answer1.BackColor = Color.Transparent;
+            this.Answer2.BackColor = Color.FromArgb(192, 192, 255);
+            this.Answer3.BackColor = Color.FromArgb(192, 192, 255);
+            this.Answer4.BackColor = Color.FromArgb(192, 192, 255);
+            this.Answer1.BackColor = Color.FromArgb(192, 192, 255);
             this.Next.Enabled = false;
         }
 
@@ -123,7 +123,7 @@ namespace Quiz
         private void AnswerSelected(int correctAnswer)
         {
             this.setGreen(correctAnswer);
-            label1.Text = service.GetScore().ToString();
+            points.Text = service.GetScore().ToString();
             this.Next.Enabled = true;
         }
 
@@ -247,9 +247,14 @@ namespace Quiz
             }
         }
 
-       
-           
-            
-        
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Questions_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
